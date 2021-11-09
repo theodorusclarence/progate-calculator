@@ -1,0 +1,131 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #323232;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.calculator {
+  background: white;
+  width: 95vw;
+  max-width: 400px;
+  border-radius: 12px;
+  -webkit-box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.6);
+}
+
+.calculator-display {
+  background: black;
+  color: white;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border-radius: 12px 12px 0 0;
+}
+
+.calculator-display h1 {
+  margin: 0;
+  padding: 1em;
+  font-size: 45px;
+  font-family: 'Lucida Console', sans-serif;
+  font-weight: 100;
+  overflow-x: auto;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.calculator-buttons {
+  padding: 0.5em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0.5em;
+}
+
+button {
+  min-height: 50px;
+  font-size: 20px;
+  font-weight: 200;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #d8d8d8;
+}
+
+button:hover {
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+}
+
+button:active {
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+}
+
+button:focus {
+  outline: none;
+}
+
+.operator {
+  background: grey;
+  color: white;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.operator[value='%'] {
+  font-size: 1.3rem;
+}
+
+.clear,
+button[value='0'] {
+  grid-column: span 2;
+}
+
+.equal-sign {
+  background: #07fcdf;
+  color: black;
+}
+
+.clear {
+  background: #e92c2c;
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */
